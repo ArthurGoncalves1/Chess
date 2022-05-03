@@ -1,3 +1,3 @@
 # Chess
 
-Projeto de jogo de xadrez
+Projeto de jogo de xadrez...
