@@ -2,7 +2,7 @@ package application;
 
 import Chess.ChessPiece;
 
-public class UI {
+public class UI{
 	
 	
 	public static void printBoard(ChessPiece[][] pieces) {
