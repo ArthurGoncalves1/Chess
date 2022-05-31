@@ -11,8 +11,8 @@ public class Program {
 		
 		UI.printBoard(cm.getPieces()); //user interface imprime o tabuleiro com as pecas
 		
-		System.out.println(cm.board.piece(0, 4)); 
-		System.out.println(cm.board.piece(2, 2)); 
+		/*System.out.println(cm.board.piece(0, 4)); 
+		System.out.println(cm.board.piece(2, 2)); */
 
 		
 	}

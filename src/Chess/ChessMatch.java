@@ -6,11 +6,12 @@ import boardgame.Board;
 import boardgame.Position;
 
 public class ChessMatch {
-	public Board board;
+	private Board board;
 	
 	public ChessMatch() {
 		board = new Board(8, 8);
-		initialSetup();
+		board.placePiece(new Rook(board, Color.WHITE), new Position(2, 1));
+		board.placePiece(new King(board, Color .BLACK), new Position(0, 4));
 	}
 	
 	public ChessPiece[][] getPieces() { // retorna a matriz de peças
@@ -23,8 +24,5 @@ public class ChessMatch {
 		return matriz;
 	}
 	
-	private void initialSetup() { //Coloca as pecas no tabuleiro
-		board.placePiece(new Rook(board, Color.WHITE), new Position(2, 1));
-		board.placePiece(new King(board, Color .BLACK), new Position(0, 4));
-	}
+
 }
