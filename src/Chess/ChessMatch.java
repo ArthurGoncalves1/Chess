@@ -1,7 +1,6 @@
 package Chess;
 
-import Chess.pieces.King;
-import Chess.pieces.Rook;
+import Chess.pieces.*;
 import boardgame.Board;
 import boardgame.Position;
 
@@ -10,19 +9,24 @@ public class ChessMatch {
 	
 	public ChessMatch() {
 		board = new Board(8, 8);
-		board.placePiece(new Rook(board, Color.WHITE), new Position(2, 1));
-		board.placePiece(new King(board, Color .BLACK), new Position(0, 4));
+		initialSetup();
 	}
 	
 	public ChessPiece[][] getPieces() { // retorna a matriz de peças
 		ChessPiece[][] matriz = new ChessPiece[board.getRows()][board.getColumns()];//intancio 64 posições no tabuleiro
 		for(int i = 0; i<board.getRows(); i++) {
-			for(int j = 0; i < board.getColumns();i++) {
+			for(int j = 0; j < board.getColumns();j++) {
 				matriz[i][j] = (ChessPiece) board.piece(i,j); // downcasting
+				
 			}
 		}
-		return matriz;
+		return matriz;   
 	}
 	
+	private void initialSetup() {
+		board.placePiece(new Rook(board, Color.WHITE), new Position(2, 1));
+		board.placePiece(new King(board, Color .BLACK), new Position(2, 1));
+		board.placePiece(new King(board, Color .WHITE), new Position(5, 4));
 
+	}
 }
