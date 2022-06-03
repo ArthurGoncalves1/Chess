@@ -40,7 +40,7 @@ public class Board {
 	
 	public void placePiece (Piece piece, Position position) {
 		if(thereIsAPiece(position)) {
-			throw new BoardException("There is already a piece on position" + position);
+			throw new BoardException("There is already a piece on position " + position);
 		}
 		pieces[position.getRow()][position.getColumn()] = piece; //um pieces[i][j] será = piece recebida como argumento da chessmatch
 		piece.position = position; //definindo a posição da peça recebida como argumento na classe Piece em questão
